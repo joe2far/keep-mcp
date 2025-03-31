@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+      "keep-mcp": {
+          "command": "uv",
+          "args": [
+              "--directory",
+              "/Users/jannik/Documents/DEV/feuerdev/keep-mcp/",
+              "run",
+              "main.py"
+          ],
+          "env": {
+            "GOOGLE_EMAIL": "Your Google Email",
+            "GOOGLE_MASTER_TOKEN": "Your Google Master Token - see README.md"
+          }
+      }
+  }
+}
