@@ -12,6 +12,17 @@
             "GOOGLE_EMAIL": "Your Google Email",
             "GOOGLE_MASTER_TOKEN": "Your Google Master Token - see README.md"
           }
+      },
+      "keep-mcp-wrapper": {
+          "command": "npm",
+          "args": [
+              "start"
+          ],
+          "env": {
+            "GOOGLE_EMAIL": "Your Google Email",
+            "GOOGLE_MASTER_TOKEN": "Your Google Master Token - see README.md"
+          }
       }
+
   }
 }
