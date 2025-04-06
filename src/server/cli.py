@@ -50,8 +50,7 @@ def create_keep_note(title: str, text: str, pinned: bool = False) -> str:
 
 
 def main():
-    #mcp.run(transport='stdio')
-    print(get_notes())
+    mcp.run(transport='stdio')
 
 
 if __name__ == "__main__":
