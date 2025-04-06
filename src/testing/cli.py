@@ -1,4 +1,9 @@
 from .testing import testing
 
-if __name__ == "__main__":
+
+def main():
     testing()
+
+
+if __name__ == "__main__":
+    main()

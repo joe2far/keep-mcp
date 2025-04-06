@@ -1,9 +1,4 @@
-from .testing import testing
-
-
-def main():
-    testing()
-
+from .cli import main
 
 if __name__ == "__main__":
     main()

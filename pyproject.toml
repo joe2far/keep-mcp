@@ -27,4 +27,4 @@ Homepage = "https://github.com/feuerdev/keep-mcp"
 Repository = "https://github.com/feuerdev/keep-mcp"
 
 [project.scripts]
-testing = "testing.cli:main"
+keep-mcp = "testing.cli:main"
