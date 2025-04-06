@@ -28,4 +28,4 @@ Repository = "https://github.com/feuerdev/keep-mcp"
 
 [project.scripts]
 testing = "testing.cli:main"
-keepmcp = "keep-mcp.cli:main"
+mcp = "server.cli:main"
