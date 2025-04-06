@@ -1,12 +1,12 @@
 """
-A FastMCP server that provides tools for calculating dimensions based on aspect ratios.
-This server specifically handles 16:9 aspect ratio calculations.
+MCP plugin for Google Keep integration.
+Provides tools for interacting with Google Keep notes through MCP.
 """
 
 from mcp.server.fastmcp import FastMCP
 from keep_api import get_notes, create_note
 
-mcp = FastMCP("my-mcp-ratio-server")
+mcp = FastMCP("keep")
 
 @mcp.resource("greeting://{name}")
 def get_greeting(name: str) -> str:
