@@ -18,21 +18,6 @@ def get_all_notes() -> str:
     """Get all Google Keep notes as a resource"""
     return get_notes()
 
-
-@mcp.tool()
-def get_height_for_16_9(width: float) -> float:
-    """
-    Get the height value for a given width using 16:9 aspect ratio.
-    
-    Args:
-        width (float): The width value
-        
-    Returns:
-        float: The calculated height value
-    """
-    return (width * 9) / 16
-
-
 @mcp.tool()
 def create_keep_note(title: str, text: str, pinned: bool = False) -> str:
     """

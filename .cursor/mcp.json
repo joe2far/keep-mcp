@@ -1,28 +1,18 @@
 {
   "mcpServers": {
-      "keep-mcp": {
-          "command": "uv",
-          "args": [
-              "--directory",
-              "/Users/jannik/Documents/DEV/feuerdev/keep-mcp/",
-              "run",
-              "main.py"
-          ],
-          "env": {
-            "GOOGLE_EMAIL": "Your Google Email",
-            "GOOGLE_MASTER_TOKEN": "Your Google Master Token - see README.md"
-          }
-      },
-      "keep-mcp-wrapper": {
-          "command": "npm",
-          "args": [
-              "start"
-          ],
-          "env": {
-            "GOOGLE_EMAIL": "Your Google Email",
-            "GOOGLE_MASTER_TOKEN": "Your Google Master Token - see README.md"
-          }
+    "keep-mcp-pipx": {
+      "command": "pipx",
+      "args": [
+        "run",
+        "--no-cache",
+        "--spec",
+        ".",
+        "mcp"
+      ],
+      "env": {
+        "GOOGLE_EMAIL": "Your Google Email",
+        "GOOGLE_MASTER_TOKEN": "Your Google Master Token - see README.md"
       }
-
+    }
   }
 }
