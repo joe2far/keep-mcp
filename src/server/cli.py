@@ -4,7 +4,7 @@ Provides tools for interacting with Google Keep notes through MCP.
 """
 
 from mcp.server.fastmcp import FastMCP
-from keep_api import get_notes, create_note
+from .keep_api import get_notes, create_note
 
 mcp = FastMCP("keep")
 
