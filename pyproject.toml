@@ -28,3 +28,7 @@ Repository = "https://github.com/feuerdev/keep-mcp"
 
 [project.scripts]
 mcp = "server.cli:main"
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
