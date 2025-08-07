@@ -4,7 +4,42 @@ MCP server for Google Keep
 
 ![keep-mcp](https://github.com/user-attachments/assets/f50c4ae6-4d35-4bb6-a494-51c67385f1b6)
 
-## How to use
+## How to use (from podman)
+
+1. Build docker image
+```
+podman build -t keep-mcp-server .
+```
+
+2. Setup MCP server for use in local project
+```
+mkdir .claude_code
+
+vim .claude_code/mcp_servers.json
+{
+  "mcpServers": {
+    "keep-notes": {
+      "command": "podman",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "--name", "keep-mcp-project",
+        "--env-file", ".env.local",
+        "keep-mcp-server"
+      ],
+      "env": {}
+    }
+  }
+}
+
+vim .env.local
+GOOGLE_EMAIL=your-project-email@gmail.com
+GOOGLE_MASTER_TOKEN=your-project-master-token
+UNSAFE_MODE=false
+```
+
+## How to use (running with pipx)
 
 1. Add the MCP server to your MCP servers:
 
@@ -33,8 +68,8 @@ Check https://gkeepapi.readthedocs.io/en/latest/#obtaining-a-master-token and ht
 ## Features
 
 * `find`: Search for notes based on a query string
-* `create_note`: Create a new note with title and text (automatically adds keep-mcp label)
-* `update_note`: Update a note's title and text
+* `create_note`: Create a new note with title, text, labels and color (automatically adds keep-mcp label)
+* `update_note`: Update a note's title, text, labels and color
 * `delete_note`: Mark a note for deletion
 
 By default, all destructive and modification operations are restricted to notes that have were created by the MCP server (i.e. have the keep-mcp label). Set `UNSAFE_MODE` to `true` to bypass this restriction.
